@@ -253,7 +253,7 @@ td, th{
 
 .mapa_conteudo{
     padding: 3em 0;
-	background: linear-gradient(#FEFEFE, #585858);
+	background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa{
@@ -268,7 +268,7 @@ td, th{
 
 .lista_beneficios{
     padding: 3em 0;
-    background: #585858;
+    background: linear-gradient(#888888, #585858);
 }
 
 .conteudos_beneficios{
