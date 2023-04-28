@@ -131,8 +131,7 @@ footer{
 }
 
 main{
-    width: 940px;
-    margin: 0 auto;
+    
 }
 
 form{
@@ -219,15 +218,18 @@ td, th{
     width: 100%;
 }
 
-main{
-    
-}
-
 .titulo_principal{
     text-align: center;
     font-size: 2em; /*em = medida igual ao tamanho original de determinado elemento, neste exemplo queremos que a fonte seja duas vezes maior que a original*/
     margin: 0 0 1em;
     clear: left; /*está limpando o FLOAT LEFT, usado na imagem ferramentas de trabalho, para não afetar mais a posição dos outros elementos*/
+}
+
+.apresentacao{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .apresentacao p{
@@ -248,17 +250,24 @@ main{
     margin: 0 20px 20px 0; /*colocando margem na imagem: seguindo a ordem - 0 para cima, 20px para direita, 20px para baixo, 0 para a esquerda*/
 }
 
-.mapa{
+.mapa_conteudo{
     padding: 3em 0;
-    text-align: center;
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa{
+    width: 940px;
+	margin: 0 auto;
 }
 
 .mapa p{
     margin: 0 0 2em;
+	text-align: center;
 }
 
 .lista_beneficios{
     padding: 3em 0;
+    background: #888888;
 }
 
 .conteudos_beneficios{
