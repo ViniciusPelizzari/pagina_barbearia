@@ -326,6 +326,51 @@ td, th{
     margin: 2em auto;
 }
 
+/*teste 1*/
+input[type="radio"] {
+                      display: none;
+                    }
+                  
+                    .toggle-switch {
+                      display: inline-block;
+                      position: relative;
+                      width: 80px;
+                      height: 40px;
+                      margin-bottom: 10px;
+                      margin-right: 10px;
+                      background: linear-gradient(#FEFEFE, #888888);
+                      background-image: linear-gradient(to bottom, #FEFEFE, #888888); /*ou to right*/
+
+                      border-radius: 34px;
+                      overflow: hidden;
+                    }
+                  
+                    .toggle-switch input[type="radio"]:checked + .toggle-slider {
+                      transform: translateX(40px);
+                      background-color: #04c253;
+                    }
+                  
+                    .toggle-slider {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      background-color: #1497ee;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                    }
+                  
+                    .switch-label {
+                      display: inline-block;
+                      margin-right: 20px;
+                      font-weight: bold;
+                    }
+  
+  
+  
+
 /*SELETORES DIRETOS, IMPORTANTE PARA USAR QUANDO PRECISA SELECIONAR ALGO DENTRO DE UM ELEMENTO MÃE COM MUITOS OUTROS ELEMENTOS FILHOS. EX: selecionar a tag <p> na tag <main>, e dentro da tag <main> a muitas outras tags diferentes com tags <p>, para selecionar apenas as filas diretas, ou seja, que não vem dentro de outra tag que nçao seja a <main>, usamos o seguinte = main > p{}, e assim buscará as respectivas tags, isto serve para outros elementos*/
 
 /*se existir mais de uma tag filha identica dentro de uma tag mãe, é usado a tag mais diferente que esteja próxima da desejada como âncora e seguido a tag desejada. Ex: várias tags <p> perto de uma tag <img>, usamos = img + p{}, para selecionar a mais próxima da âncora utilizada, se está for a desejada; se quer pegar todos os <p> após a âncora <img>, usa-se = img ~p{}*/

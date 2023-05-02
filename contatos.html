@@ -39,13 +39,14 @@
                 <label for="observacao">Mensagem / Observação:</label>
                 <textarea cols=30" rows="15" id="observacao" class="input_padrao"></textarea>
 
-                <fieldset> <!--se for um formulário, usa-de <fieldset> no lugar do <div> se for usado um fieldset, no lugar do <p> é usado o <legend>-->
+                <!--
+                <fieldset> ***se for um formulário, usa-de <fieldset> no lugar do <div> se for usado um fieldset, no lugar do <p> é usado o <legend>
                     <legend>Como prefere o nosso contato?</legend>
-                    <label for="radio_email"><input type="radio" name="forma_contato" value="email" id="radio_email">Email</label> <!--se for um campo especifico como: email, telefone, senha, verificar qual a melhor forma de ser usado para o site ficar bom e facilitar o preenchimento, site: http://www.mobileinputtypes.com/-->
+                    <label for="radio_email"><input type="radio" name="forma_contato" value="email" id="radio_email">Email</label> ***se for um campo especifico como: email, telefone, senha, verificar qual a melhor forma de ser usado para o site ficar bom e facilitar o preenchimento, site: http://www.mobileinputtypes.com/
 
                     <label for="radio_telefone"><input type="radio" name="forma_contato" value="telefone" id="radio_telefone">Telefone</label>
 
-                    <label for="radio_whatsapp"><input type="radio" name="forma_contato" value="whatsapp" id="radio_whatsapp" checked>WhatsApp</label> <!--checked = vai ficar está opção marcada caso não houver outra-->
+                    <label for="radio_whatsapp"><input type="radio" name="forma_contato" value="whatsapp" id="radio_whatsapp" checked>WhatsApp</label> ***checked = vai ficar está opção marcada caso não houver outra
 
                     <label for="radio_instagram"><input type="radio" name="forma_contato" value="instagram" id="radio_instagram">Instagram</label>
 
@@ -53,8 +54,52 @@
                     
                     <label><input type="datetime-local"> Dia para agendamento</label>
                 </fieldset>
+                -->
 
-                <p>Agendamento</p>
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    <div class="switch-container">
+                      <label for="switch_email" class="switch-label">Email</label>
+                      <label class="toggle-switch">
+                        <input type="radio" id="switch_email" name="forma_contato" value="email">
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                    <div class="switch-container">
+                      <label for="switch_telefone" class="switch-label">Telefone</label>
+                      <label class="toggle-switch">
+                        <input type="radio" id="switch_telefone" name="forma_contato" value="telefone">
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                    <div class="switch-container">
+                      <label for="switch_whatsapp" class="switch-label">WhatsApp</label>
+                      <label class="toggle-switch">
+                        <input type="radio" id="switch_whatsapp" name="forma_contato" value="whatsapp" c>
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                    <div class="switch-container">
+                      <label for="switch_instagram" class="switch-label">Instagram</label>
+                      <label class="toggle-switch">
+                        <input type="radio" id="switch_instagram" name="forma_contato" value="instagram">
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                    <label><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+                    
+                    <label><input type="datetime-local"> Dia para agendamento</label>
+                  </fieldset>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                
+
+                <!--<p>Agendamento</p>
                 <fieldset class="opcao_dia">
                     <legend>Qual dia?</legend> 
                     <select>
@@ -86,7 +131,7 @@
                         <option>17:45</option>
                         <option>18:30</option>
                     </select>
-                </fieldset>
+                </fieldset>-->
 
                 <input type="submit" name="forma_contato" value="Enviar Formulário" class="enviar"> <!--botão de envio-->               
             </form>
