@@ -28,7 +28,7 @@
         <main class="main_contatos">
             <form>
                 <label for="nome_completo">Nome completo:</label>
-                <input type="text" id="nome_completo" class="input_padrao" required> <!--requerid = obrigatório-->
+                <input type="text" id="nome_completo" class="input_padrao" required placeholder="Nome Completo"> <!--requerid = obrigatório-->
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" class="input_padrao" required placeholder="seuemail@dominio.com">
@@ -75,7 +75,7 @@
                     <div class="switch-container">
                       <label for="switch_whatsapp" class="switch-label">WhatsApp</label>
                       <label class="toggle-switch">
-                        <input type="radio" id="switch_whatsapp" name="forma_contato" value="whatsapp" c>
+                        <input type="radio" id="switch_whatsapp" name="forma_contato" value="whatsapp" checked>
                         <span class="toggle-slider"></span>
                       </label>
                     </div>
@@ -86,52 +86,29 @@
                         <span class="toggle-slider"></span>
                       </label>
                     </div>
-                    <label><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+                    <label class="checkbox"><input type="checkbox" required>Gostaria de receber nossas novidades por email?</label>
                     
-                    <label><input type="datetime-local"> Dia para agendamento</label>
+                    <label class="data_hora"><br>Dia para agendamento<br><br>
+                        <input type="datetime-local">
+                    </label>
                   </fieldset>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                
 
-                <!--<p>Agendamento</p>
-                <fieldset class="opcao_dia">
-                    <legend>Qual dia?</legend> 
-                    <select>
-                        <option value="" disabled selected>Dia</option>
-                        <option>Segunda</option>
-                        <option>Terça</option>
-                        <option>Quarta</option>
-                        <option>Quinta</option>
-                        <option>Sexta</option>
-                        <option>Sábado</option>
-                    </select>
-                </fieldset>
-                <fieldset class="opcao_hora">
-                    <legend>Qual horário?</legend>
-                    <select>
-                        <option value="" disabled selected>Horário</option>
-                        <option>08:00</option>
-                        <option>08:45</option>
-                        <option>09:30</option>
-                        <option>10:15</option>
-                        <option>11:00</option>
-                        <option>11:45</option>
-                        <option>13:15</option>
-                        <option>14:00</option>
-                        <option>14:45</option>
-                        <option>15:30</option>
-                        <option>16:15</option>
-                        <option>17:00</option>
-                        <option>17:45</option>
-                        <option>18:30</option>
-                    </select>
-                </fieldset>-->
+                <script>
+                    // Selecionar o botão "Enviar"
+                    let botaoEnviar = document.querySelector(".enviar");
+                
+                    // Adicionar um ouvinte de evento para o clique no botão
+                    botaoEnviar.addEventListener("click", function(event) {
+                        // Impedir o envio do formulário para o servidor
+                        event.preventDefault();
+                
+                        // Recuperar os valores dos campos do formulário
+                        let nome = document.getElementById("nome_completo").value;
+                        let email = document.getElementById("email").value;
+                        let telefone = document.getElementById("telefone").value;
+                        let observacao = document.getElementById("observacao").value;                     
+                    });
+                </script>
 
                 <input type="submit" name="forma_contato" value="Enviar Formulário" class="enviar"> <!--botão de envio-->               
             </form>
@@ -149,27 +126,27 @@
                 <tbody>
                     <tr>
                         <td>Segunda-Feira</td>
-                        <td>08:00 ~ 19:00</td>
+                        <td>08:00 / 19:00</td>
                     </tr>
                     <tr>
                         <td>Terça-Feira</td>
-                        <td>08:00 ~ 19:00</td>
+                        <td>08:00 / 19:00</td>
                     </tr>
                     <tr>
                         <td>Quarta-Feira</td>
-                        <td>08:00 ~ 19:00</td>
+                        <td>08:00 / 19:00</td>
                     </tr>
                     <tr>
                         <td>Quinta-Feira</td>
-                        <td>08:00 ~ 19:00</td>
+                        <td>08:00 / 19:00</td>
                     </tr>
                     <tr>
                         <td>Sexta-Feira</td>
-                        <td>08:00 ~ 19:00</td>
+                        <td>08:00 / 19:00</td>
                     </tr>
                     <tr>
                         <td>Sábado</td>
-                        <td>09:00 ~ 17:00</td>
+                        <td>09:00 / 17:00</td>
                     </tr>
                 </tbody>
             </table>

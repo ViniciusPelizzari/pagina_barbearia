@@ -130,6 +130,13 @@ footer{
     margin-top: 20px;
 }
 
+#body_contatos {
+    background: linear-gradient(#909090, #F3F3F3);
+    margin: 0;
+    padding: 0;
+}
+
+
 .main_contatos{
     width: 940px;
 	margin: 0 auto;
@@ -326,48 +333,102 @@ td, th{
     margin: 2em auto;
 }
 
-/*teste 1*/
-input[type="radio"] {
-                      display: none;
-                    }
-                  
-                    .toggle-switch {
-                      display: inline-block;
-                      position: relative;
-                      width: 80px;
-                      height: 40px;
-                      margin-bottom: 10px;
-                      margin-right: 10px;
-                      background: linear-gradient(#FEFEFE, #888888);
-                      background-image: linear-gradient(to bottom, #FEFEFE, #888888); /*ou to right*/
+.toggle-switch:hover .toggle-slider {
+    background-color: #04c253;
+}
 
-                      border-radius: 34px;
-                      overflow: hidden;
-                    }
-                  
-                    .toggle-switch input[type="radio"]:checked + .toggle-slider {
-                      transform: translateX(40px);
-                      background-color: #04c253;
-                    }
-                  
-                    .toggle-slider {
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      width: 40px;
-                      height: 40px;
-                      border-radius: 50%;
-                      background-color: #1497ee;
-                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-                      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-                    }
-                  
-                    .switch-label {
-                      display: inline-block;
-                      margin-right: 20px;
-                      font-weight: bold;
-                    }
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: linear-gradient(#FEFEFE, #888888);
+    background-image: linear-gradient(to bottom, #FEFEFE, #888888); /*ou to right*/
+    border-radius: 34px;
+    overflow: hidden;
+}
+
+.toggle-switch:hover{
+    background-color: #04c253;
+}
   
+.toggle-switch input[type="radio"] {
+    display: none;
+}
+  
+.toggle-switch label {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; /* ajuste a posição do texto */
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+.toggle-switch input[type="radio"]:checked + .toggle-slider {
+    transform: translateX(40px);
+    background-color: #04c253;
+}
+  
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1497ee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+                          
+.switch-label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.switch-container{
+      display: flex;
+      align-items: center;
+}
+  
+.checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    appearance: none;
+    border: 2px solid #1497ee;
+    background: #1497ee;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-color: #000000;
+}                    
+                      
+.checkbox input[type="checkbox"]:checked {
+    background-color: #04c253;
+    border-color: #000000;
+}                      
+                      
+.checkbox input[type="checkbox"]:checked:after {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+}                      
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}                    
   
   
 
